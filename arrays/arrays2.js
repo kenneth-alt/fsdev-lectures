@@ -1,7 +1,6 @@
-const array = ['chris', 'ugo', 'larry', 'himah']
+const selectedColours = ['red', 'blue'];
+selectedColours[2] = 'green';
+selectedColours[3] = 1
 
-function randomEntry(myArray) {
-    let randomIndex = Math.random()*myArray.length
-    randomIndex = Math.floor(randomIndex)
-    console.log(randomIndex)
-}
+console.log(selectedColours.length)
+
