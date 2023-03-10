@@ -45,17 +45,28 @@ let numberOfDragons = req.query.numberOfDragons;
     } 
 })
 
-app.get('/dragon', (req, res) => {
-    let numberOfDragons = req.query.numberOfDragons;
-    
-        if (dragons == "true") {
-            res.send(
-             "You're in a decently lit wood" + 
-             "with" + 
-             numberOfDragons + 
-             " dragons");
-        } else {
-            res.send("You're in a deep dark wood");
-        } 
-    })
-
+app.get("/dragon", (request, response) => {
+    let dragons = request.query.dragons;
+    let numberOfDragons = request.query.numberOfDragons;
+  
+    console.log("dragons is", dragons);
+    console.log("numberOfDragons is(", numberOfDragons, ")");
+    if (numberOfDragons === undefined) {
+      return response.send("Please enter numberOfDragons");
+    }
+    if (dragons == "true") {
+      response.send(
+        "You are in a deep, decently lit wood..." +
+          "with " +
+          (+numberOfDragons > 500 ? "A lot of" : numberOfDragons) +
+          " dragons"
+      );
+    } else {
+      response.send(
+        "You are in a deep, dark wood..." +
+          "with " +
+          (+numberOfDragons > 500 ? "A lot of" : numberOfDragons) +
+          " dragons"
+      );
+    }
+  });
