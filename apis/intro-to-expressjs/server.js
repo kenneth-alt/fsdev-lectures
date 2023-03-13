@@ -1,15 +1,25 @@
 import express from "express";
+import { testRouter } from './testRouter.js'
 
 const app = express();
-const PORT = 4000;
+const PORT = 5050;
+
+app.use(express.json())
 
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
 
 app.get('/', (request, response) => {
-	  response.send('Hello World, we die here!')
+	  response.send('The server is up...\n')
 })
+
+app.use('/test', testRouter)
+
+
+
+
+
 
 app.get("/path2", (request, response) => {
     response.send('This is path 2 <br /> ...and this is a line break')
