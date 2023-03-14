@@ -1,5 +1,6 @@
 import express from 'express';
-import { getAllDrinks } from './data.js'
+import { getAllDrinks, addDrink } from './data.js'
+
 
 export const testRouter = express.Router();
 
@@ -10,4 +11,11 @@ testRouter.get('/', (request, response) => {
 testRouter.get('/drinks', (request, response) => {
     const drinks = getAllDrinks()
     response.send(drinks)
+})
+
+testRouter.post('/drinks', (request, response) => {
+    const newDrink = request.body;
+    addDrink(newDrink)
+
+    response.send('ok')
 })

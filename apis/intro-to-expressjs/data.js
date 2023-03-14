@@ -8,6 +8,7 @@ export function getAllDrinks() {
     return drinks
 }
 
-export function adddrink() {
+export function addDrink(drink) {
+    drinks.push(drink)
 
 }
