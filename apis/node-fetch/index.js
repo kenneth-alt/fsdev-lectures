@@ -1,12 +1,12 @@
-import fetch from 'node-fetch';
+import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-async function run() {
-  const response = await fetch(
-    'https://represent.opennorth.ca/postcodes/T2G0E7'
-  );
-  const result = await response.json();
+dotenv .config();
 
-  console.log(result);
+console.log(process.env.MONGO_URL)
+
+async function main() {
+  await mongoose.connect();
 }
 
-run();
+// main().catch((err) => console.log(err));
