@@ -60,3 +60,11 @@ console.log(function1(testArr, 6))
 console.log(`After ${testArr}`)
 
 
+const testVal = (val) => {
+    if (val === 12) {
+    return true
+    }; 
+    return false
+}
+
+console.log(testVal(12))
