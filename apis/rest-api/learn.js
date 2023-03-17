@@ -84,5 +84,25 @@ const grading = (score) => {
 console.log(grading(-45))
 
 
+let switchCase = (score) => {
+    let answer = ""
+    switch(score) {
+        case 7:
+            answer = "high"
+            break;
+        case 5:
+            answer = "mid"
+            break;
+        case 3:
+            answer = "low"
+            break;
+        default:
+            answer = "out of range"
+            break;
+    }
+    return answer
+}
+
+console.log(switchCase(4))
 
 
