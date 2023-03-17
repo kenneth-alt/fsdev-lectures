@@ -66,7 +66,23 @@ const testVal = (val) => {
     }; 
     return false
 }
-
 console.log(testVal(12))
+
+let grades = ['A', 'C', 'P', 'F']
+const grading = (score) => {
+    if (score >= 70) {
+        return grades[0]
+    } else if (score >= 60) {
+        return grades[1]
+    } else if (score >= 50) {
+        return grades[2]
+    } else {
+        return grades[3]
+    }
+}
+
+console.log(grading(-45))
+
+
 
 
