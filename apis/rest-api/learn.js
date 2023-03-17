@@ -106,3 +106,19 @@ let switchCase = (score) => {
 console.log(switchCase(4))
 
 
+let filterOdds = (num) => {
+    let oddDigits = "";
+    for (let digit of num.toString()) {
+        if (parseInt(digit) % 2 !== 0) {
+            oddDigits += digit;
+        }
+        if (oddDigits === "") {
+            oddDigits = "No odd numbers found"
+        }
+}
+    return oddDigits
+}
+
+console.log(filterOdds(2468064620));
+
+
