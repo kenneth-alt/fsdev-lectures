@@ -112,13 +112,13 @@ let filterOdds = (num) => {
         if (parseInt(digit) % 2 !== 0) {
             oddDigits += digit;
         }
-        if (oddDigits === "") {
-            oddDigits = "No odd numbers found"
-        }
+    if (oddDigits === " ") {
+        oddDigits = "No odd numbers found"
+    }
 }
     return oddDigits
 }
 
-console.log(filterOdds(2468064620));
+console.log(filterOdds(29463865462011));
 
 
