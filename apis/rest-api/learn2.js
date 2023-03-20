@@ -25,9 +25,6 @@ cc(2); cc(3); cc(1);
 
 //console.log(cc(4))
 
-let men = [
-  {}
-]
 
 let boy = {
   "name": "Leo",
@@ -64,14 +61,38 @@ let myCollection ={
     "tracks": ["Beautiful Onyinye", "Testimony", "Reason with me"]
   },
   "104": {
-    "album": "Tempatation"
+    "album": "Animal Talk"
   }
 }
 
 let myCollectionCopy = JSON.parse(JSON.stringify(myCollection));
 
 function updateRecords(id, prop, value) {
-  
+  if (value === "") {
+    delete myCollection[id][prop];
+  } else if (prop === "tracks") {
+    myCollection[id][prop] = myCollection[id][prop] || [];
+    myCollection[id][prop].push(value)
+  } else {
+    myCollection[id][prop] = value
+  }
+  return myCollection
 }
 
+//updateRecords("104", "tracks", "Zombie")
 
+//updateRecords("104", "artist", "Fela")
+
+//console.log(updateRecords("102", "artist", ""))
+
+
+let given = "134726692873536337634537"
+let myArray = given.split('').map(Number)
+let oddNumbers = ""
+
+  myArray.forEach(num)
+    if (item % 2 !== 0) {
+      oddNumbers.push(num)
+    }
+   
+console.log(oddNumbers)
