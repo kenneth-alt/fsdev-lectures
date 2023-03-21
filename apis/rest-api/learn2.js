@@ -86,7 +86,7 @@ function updateRecords(id, prop, value) {
 //console.log(updateRecords("102", "artist", ""))
 
 
-let given = "134726692873536337634537"
+/*let given = "134726692873536337634537"
 let myArray = given.split('').map(Number)
 let oddNumbers = ""
 
@@ -95,4 +95,20 @@ let oddNumbers = ""
       oddNumbers.push(num)
     }
    
-console.log(oddNumbers)
+//console.log(oddNumbers) */
+
+function descendingOrder(n){
+  let 
+  num.sort(function(a, b) {
+    return b - a
+  });
+  return num
+}
+
+//console.log(descendingOrder(2345678))
+
+
+
+
+
+
