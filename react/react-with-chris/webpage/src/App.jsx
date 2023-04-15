@@ -7,7 +7,7 @@ const computerOpponentUrl = 'http://localhost:5051/rps'
 
 function Button(props){
   const {text, fire} = props
-  return <button style={{backgroundColor: 'white', color: 'black', margin: 4}} 
+  return <button style={{backgroundColor: 'lime', color: 'black', margin: 4}} 
   onClick={fire}>{text}</button>
 }
 

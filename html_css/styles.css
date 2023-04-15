@@ -1,0 +1,16 @@
+h1 {
+    background: olivedrab;
+    color: antiquewhite;
+    text-align: center;
+}
+
+h3 {
+    background: limegreen;
+    padding: 10px;
+}
+
+.sections {
+    outline: 3px solid lime;
+    padding: auto;
+    margin: 0 auto;
+}
