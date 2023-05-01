@@ -1,4 +1,8 @@
-export default function Footer({user, setUser}) {
+import { useContext } from "react"
+import { UserContext } from "./UserContext"
+
+export default function Footer() {
+    const {user, setUser} = useContext(UserContext)
     function logout(){
         setUser(null)
     }
