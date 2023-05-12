@@ -1,4 +1,10 @@
 import express from 'express'
 
-app = express()
-port = 2012
+const app = express()
+const port = 2012
+
+app.use('/', (req, res) => {
+    res.send('Hello world');
+  });
+
+app.listen(port, () => console.log(`Server started on port ${port}`))
