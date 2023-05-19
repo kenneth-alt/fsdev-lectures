@@ -4,8 +4,6 @@ export function getData() {
     return data
 }
 
-export function postData() {
-    newMessage = req.body
-
-    
+export function putData() {
+    data.push(data)
 }

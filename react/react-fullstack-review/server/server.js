@@ -14,6 +14,10 @@ app.get('/api/data', (req, res) => {
   res.send(getData())
 });
 
-
+app.put('/api/data', (req, res) => {
+  const newData = req.body.data
+  putData(data)
+  res.send(putData())
+});
 
 app.listen(port, () => console.log(`Server started on port ${port}`))
