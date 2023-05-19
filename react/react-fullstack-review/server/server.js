@@ -14,4 +14,6 @@ app.get('/api/data', (req, res) => {
   res.send(getData())
 });
 
+
+
 app.listen(port, () => console.log(`Server started on port ${port}`))
