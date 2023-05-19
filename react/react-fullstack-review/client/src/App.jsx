@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Data from './Data';
 import './App.css'
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
     <div>
       <p>Kenneth's webpage</p>
       {message}
+      <br />
+      <Data />
     </div>
   )
 }
