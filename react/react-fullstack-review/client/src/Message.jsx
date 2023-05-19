@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Data from './Data';
-import Message from './Message';
 import './App.css'
 
-function App() {
+function Message() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
@@ -22,12 +20,11 @@ function App() {
 
   return (
     <div>
-      <p>Kenneth's webpage</p>
-      <Message />
-      <br />
-      <Data />
+      
+      {message}
+
     </div>
   )
 }
 
-export default App
+export default Message

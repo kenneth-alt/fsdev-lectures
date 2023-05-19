@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css'
 
 function Data() {
-  const [data, setData] = useState('');
+  const [data, setData] = useState([]);
 
   useEffect(() => {
      async function getData() {
@@ -21,7 +21,9 @@ function Data() {
   return (
     <div>
       
-      {data}
+      {data.map(message => {
+        return <div>{message}</div>
+      })}
 
     </div>
   )
